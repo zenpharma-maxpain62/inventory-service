@@ -33,7 +33,7 @@ jobs:
       - name: sonar scan
         uses: SonarSource/sonarqube-scan-action@da4450e400cebf84292b12a85d4ca0080ae2938c
         env:
-          SONAR_TOKEN=${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
             -Dsonar.projectkey=${{ vars.SONAR_PROJECT_KEY }}
