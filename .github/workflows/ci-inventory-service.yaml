@@ -54,7 +54,7 @@ jobs:
       - name: build docker image
         id: image-build
         run: |
-          IMAGE=${{ steps.login-ecr.outputs.repository }}/inventory-service:${{ steps.fetch-tag.outputs.tag }}
+          IMAGE=${{ steps.login-ecr.outputs.registry }}/inventory-service:${{ steps.fetch-tag.outputs.tag }}
           docker build -t $IMAGE .
           echo "image=$IMAGE" >> "$GITHUB_OUTPUT"
 
