@@ -77,8 +77,8 @@ jobs:
       
       - name: push docker image
         run:
-          IMAGE=${{ steps.image-build.outputs.image }}
-          docker push $IMAGE
+          IMAGE="${{ steps.image-build.outputs.image }}"
+          docker push "$IMAGE"
 
   deploy:
     name: deploy to gitops
