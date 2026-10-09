@@ -121,4 +121,6 @@ jobs:
           sed -i "s/$CURRENT_IMAGE_TAG/$IMAGE_TAG/g" envs/dev/values-inventory-service.yaml
 
           git add envs/dev/values-inventory-service.yaml
+          git commit -m "update: inventory service image tag to $IMAGE_TAG"
+
           git push
